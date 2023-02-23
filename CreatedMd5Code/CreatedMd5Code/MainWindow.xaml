@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CreatedMd5Code"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1500" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="540" Width="1920" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -13,15 +13,15 @@
         </Grid.RowDefinitions>
 
         <Border BorderThickness="5" BorderBrush="Black" Margin="5">
-            <Grid>
+            <Grid ShowGridLines="True">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
@@ -30,27 +30,27 @@
                        FontSize="25" FontWeight="Bold" Background="LightBlue"/> 
                 <Label Grid.Row="1" Content="Content" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        FontSize="25" FontWeight="Bold"/>
-                <Label Grid.Row="1" Grid.Column="1" Content="Pass" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                       FontSize="25" FontWeight="Bold"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="txtEncryptContent" Text="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       FontSize="15" FontWeight="Bold" TextWrapping="WrapWithOverflow"/>
 
-                <TextBox Grid.Row="2" Grid.Column="0" x:Name="txtEncryptContent" Text="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                <Label Grid.Row="2" Grid.Column="0" Content="Pass" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        FontSize="25" FontWeight="Bold"/>
-                <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtEncryptPass" Text="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                       FontSize="25" FontWeight="Bold"/>
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtEncryptPass" Text="ITFramasBDVN" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       FontSize="15" FontWeight="Bold"/>
                 <Button Grid.Row="2" Grid.Column="2" x:Name="btnEncrypt" Content="Encrypt" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        FontSize="25" FontWeight="Bold" Background="LightGreen" Click="btnEncrypt_Click"/>
             </Grid>
         </Border>
         <Border Grid.Row="1" BorderThickness="5" BorderBrush="Black" Margin="5">
-            <Grid>
+            <Grid ShowGridLines="True">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
@@ -59,13 +59,13 @@
                        FontSize="25" FontWeight="Bold" Background="LightCoral"/>
                 <Label Grid.Row="1" Content="Content" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        FontSize="25" FontWeight="Bold"/>
-                <Label Grid.Row="1" Grid.Column="1" Content="Pass" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                <Label Grid.Row="2" Grid.Column="0" Content="Pass" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        FontSize="25" FontWeight="Bold"/>
 
-                <TextBox Grid.Row="2" Grid.Column="0" x:Name="txtDecryptContent" Text="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                       FontSize="25" FontWeight="Bold"/>
-                <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtDecryptPass" Text="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                       FontSize="25" FontWeight="Bold"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="txtDecryptContent" Text="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       FontSize="15" FontWeight="Bold" TextWrapping="WrapWithOverflow"/>
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtDecryptPass" Text="ITFramasBDVN" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       FontSize="15" FontWeight="Bold"/>
                 <Button Grid.Row="2" Grid.Column="2" x:Name="btnDecrypt" Content="Decrypt" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        FontSize="25" FontWeight="Bold" Background="LightGreen" Click="btnDecrypt_Click"/>
             </Grid>
