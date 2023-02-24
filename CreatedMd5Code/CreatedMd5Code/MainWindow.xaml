@@ -37,8 +37,12 @@
                        FontSize="25" FontWeight="Bold"/>
                 <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtEncryptPass" Text="ITFramasBDVN" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        FontSize="15" FontWeight="Bold"/>
-                <Button Grid.Row="2" Grid.Column="2" x:Name="btnEncrypt" Content="Encrypt" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                       FontSize="25" FontWeight="Bold" Background="LightGreen" Click="btnEncrypt_Click"/>
+                <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btnEncrypt" Content="Encrypt" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       FontSize="25" FontWeight="Bold" Background="LightGreen" Click="btnEncrypt_Click" Margin="10" Width="180"/>
+                    <Button x:Name="btnCopyEncrypt" Content="Copy" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       FontSize="25" FontWeight="Bold" Background="LightGreen" Margin="10" Width="180" Click="btnCopyEncrypt_Click"/>
+                </StackPanel>
             </Grid>
         </Border>
         <Border Grid.Row="1" BorderThickness="5" BorderBrush="Black" Margin="5">
@@ -66,8 +70,13 @@
                        FontSize="15" FontWeight="Bold" TextWrapping="WrapWithOverflow"/>
                 <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtDecryptPass" Text="ITFramasBDVN" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                        FontSize="15" FontWeight="Bold"/>
-                <Button Grid.Row="2" Grid.Column="2" x:Name="btnDecrypt" Content="Decrypt" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                       FontSize="25" FontWeight="Bold" Background="LightGreen" Click="btnDecrypt_Click"/>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">
+                    <Button x:Name="btnDecrypt" Content="Decrypt" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       FontSize="25" FontWeight="Bold" Background="LightGreen" Click="btnDecrypt_Click" Margin="10" Width="180"/>
+                    <Button x:Name="btnCopyDecrypt" Content="Copy" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                       FontSize="25" FontWeight="Bold" Background="LightGreen" Margin="10" Width="180" Click="btnCopyDecrypt_Click"/>
+                </StackPanel>
             </Grid>
         </Border>
     </Grid>

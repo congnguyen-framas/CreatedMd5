@@ -42,5 +42,15 @@ namespace CreatedMd5Code
                 txtEncryptContent.Text = EncodeMD5.DecryptString(txtDecryptContent.Text, txtDecryptPass.Text);
             }));
         }
+
+        private void btnCopyEncrypt_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Clipboard.SetText(txtEncryptContent.Text);
+        }
+
+        private void btnCopyDecrypt_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Clipboard.SetText(txtDecryptContent.Text);
+        }
     }
 }
